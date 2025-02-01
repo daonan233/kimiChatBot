@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.10'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.10'
+    id 'net.mamoe.mirai-console' version '2.16.0'
+}
+dependencies {
+    implementation 'net.mamoe:mirai-console:2.16.0'
+    implementation 'net.mamoe:mirai-core:2.16.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3' // 用于调用 API
+    // Apache HttpClient
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+
+    // Jackson JSON 处理库
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.3'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // 日志框架（可选，Mirai 自带日志）
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+group = 'com.example'
+version = '0.1.0'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public' }
+    mavenCentral()
+}
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
